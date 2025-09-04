@@ -43,7 +43,15 @@ cd project
 ## Chain / Linienzug
 
 Die einzelnen Line-Objekte des Linienzugs sind im Chain-Objekt nicht sortiert. 
-(angenzende Liniensegmente folgen nicht aufeinander)
+(angrenzende Liniensegmente folgen nicht unbedingt aufeinander)
 
+### Linienzug Algorithmus
+
+Zuerst werden alle Punkte zu ihren anliegenden Linien gemappt.
+
+Danach werden alle Punkte mit genau 2 Linien betrachtet, für diese Punkte gibt es 3 Möglichkeiten:
+- beide Linien sind in einem Linienzug --> die beiden Linienzüge werden durch den betrachteten Punkt verbunden
+- keine der beiden Linien ist bereits in einem Linienzug --> neuer Linienzug wird erstellt
+- eine der Linien ist bereits Teil eines Linienzugs --> die andere Linie wird dem Linienzug hinzugefügt
 
 

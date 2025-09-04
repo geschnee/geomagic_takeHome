@@ -119,7 +119,7 @@ public class MainClass {
 		}
 
 		// now the points are mapped to all the lines they are a part of
-		// next we check all mappings with exactly two lines and join them (Chain Object)
+		// next we check all mappings with exactly two lines and join them (resulting in a Chain Object)
 
 		List<Chain> joins = new ArrayList<Chain>();
 
@@ -189,7 +189,7 @@ public class MainClass {
 		g2d.setColor(Color.white);
 		g2d.fillRect(0, 0, width, height);
 
-		Color[] colors = new Color[]{Color.black, Color.red, Color.green, Color.blue};
+		Color[] colors = new Color[]{Color.black, Color.red, Color.green, Color.blue, Color.yellow, Color.MAGENTA};
 
 		if (chains.size()>colors.length){
 			System.out.println("There are not enough colors for the amount of chains to draw, please use a smaller file or change the sourcecode");
